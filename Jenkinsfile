@@ -38,7 +38,7 @@ node{
         sh 'docker build -t ashokit/mavenwebapp .'
     }
     
-    stage('Push Image1'){
+    stage('Push Image'){
         withCredentials([string(credentialsId: 'DOCKER-CREDENTIALS', variable: 'DOCKER_CREDENTIALS')]) {
             sh 'docker login -u ashokit -p ${DOCKER_CREDENTIALS}'
         }
