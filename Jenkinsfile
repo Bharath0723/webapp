@@ -4,7 +4,7 @@ node{
         git credentialsId: 'GIT-Credentials', url: 'https://github.com/ashokitschool/maven-web-app.git'
     }
     
-    stage('Maven Build'){
+    stage('Maven Build1'){
         def mavenHome = tool name: "Maven-3.8.6", type: "maven"
         def mavenCMD = "${mavenHome}/bin/mvn"
         sh "${mavenCMD} clean package"
